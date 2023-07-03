@@ -1,7 +1,10 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SensoreController;
+use App\Http\Controllers\EdificioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/edificioNuovo', [EdificioController::class, 'create']);
+
 Route::get('/{id}/edificio', [EdificioController::class, 'read']);
 
-Route::get('/edificio', [EdificioController::class, 'readAll']);
+Route::get('/edifici', [EdificioController::class, 'readAll']);
+
+Route::post('/sensoreNuovo', [EdificioController::class, 'create']);
 
 Route::get('/{id}/sensore', [SensoreController::class, 'read']);
 
-Route::get('/sensore', [SensoreController::class, 'readAll']);
+Route::get('/sensori', [SensoreController::class, 'readAll']);

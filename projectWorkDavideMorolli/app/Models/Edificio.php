@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Edificio extends Model
 {
+    protected $table = 'edificio';
 
     public function edificio(): HasMany
     {

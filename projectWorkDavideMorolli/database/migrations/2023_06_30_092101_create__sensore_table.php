@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('sensore', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_di_sensore');
-            $table->double('dati_di_consumo');
-            $table->date('data_di_installazione');
+            $table->string('dati_di_consumo');
+            $table->string('data_di_installazione');
             $table->timestamps();
         });
     }

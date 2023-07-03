@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('edificio', function (Blueprint $table) {
             $table->id();
             $table->string('indirizzo');
-            $table->double('dimensioni');
-            $table->date('anno_di_costruzione');
+            $table->string('dimensioni');
+            $table->string('anno_di_costruzione');
             $table->timestamps();
         });
     }

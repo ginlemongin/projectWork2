@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Sensore extends Model
 {
-
+    protected $table = 'sensore';
     public function sensore(): BelongsTo
     {
         return $this->belongsTo(Edificio::class);
