@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EdificioDetailComponent } from './edificio-detail/edificio-detail.component';
+import { EdificioListComponent } from './edificio-list/edificio-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EdificioDetailComponent,
+    EdificioListComponent
   ],
   imports: [
     BrowserModule,
