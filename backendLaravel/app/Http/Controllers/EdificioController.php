@@ -1,5 +1,17 @@
 <?php
+/**
+          _.-/`)
+         // / / )
+      .=// / / / )
+     //`/ / / / /
+    // /     ` /
+   ||         /
+    \\       / pray for 60 plis
+     ))    .'
+    //    /
+         /
 
+ */
 namespace App\Http\Controllers;
 
 use App\Models\Edificio;
