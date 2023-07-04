@@ -38,6 +38,7 @@ class SensoreController extends Controller
         $sensore->tipo_di_sensore = $request->tipo_di_sensore;
         $sensore->dati_di_consumo = $request->dati_di_consumo;
         $sensore->data_di_installazione = $request->data_di_installazione;
+        $sensore->edificio_id = $request->edificio_id;
         $sensore->save();
 
         return;

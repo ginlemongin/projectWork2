@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('tipo_di_sensore');
             $table->string('dati_di_consumo');
             $table->string('data_di_installazione');
+
+            $table->unsignedBigInteger('edificio_id');
+            $table->foreign('edificio_id')->references('id')->on('edificio');
             $table->timestamps();
-        });
+            });
     }
 
     /**

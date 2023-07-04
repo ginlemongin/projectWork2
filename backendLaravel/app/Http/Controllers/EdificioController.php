@@ -11,8 +11,8 @@ class EdificioController extends Controller
     public function read(int $id)
     {
 
-        $edificio = Edificio::where('id', $id)
-            ->first();
+        $edificio = Edificio::with('sensore')
+            ->findOrFail($id);
 
         if($edificio != null){
 
@@ -29,7 +29,7 @@ class EdificioController extends Controller
     public function readAll()
     {
 
-        $edifici = Edificio::all();
+        $edifici = Edificio::with('sensore')->get();
 
         return response()->json($edifici);
     }

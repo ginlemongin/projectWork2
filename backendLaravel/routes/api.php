@@ -23,7 +23,7 @@ Route::get('/{id}/edificio', [EdificioController::class, 'read']);
 
 Route::get('/edifici', [EdificioController::class, 'readAll']);
 
-Route::post('/sensoreNuovo', [EdificioController::class, 'create']);
+Route::post('/sensoreNuovo', [SensoreController::class, 'create']);
 
 Route::get('/{id}/sensore', [SensoreController::class, 'read']);
 

@@ -11,7 +11,7 @@ class Edificio extends Model
 {
     protected $table = 'edificio';
 
-    public function edificio(): HasMany
+    public function sensore(): HasMany
     {
         return $this->hasMany(Sensore::class);
     }
