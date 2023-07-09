@@ -2,16 +2,26 @@
 <table>
   <thead>
     <tr>
+      <th>Dettagli</th>
       <th>Indirizzo</th>
       <th>Dimensioni</th>
       <th>Anno di costruzione</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{ listaEdifici.indirizzo }}</td>
-      <td>{{ listaEdifici.dimensioni }}</td>
-      <td>{{ listaEdifici.annoCostruzione }}</td>
+    <tr *ngFor="let edificio of edifici">
+      <td>
+      <button type="button" (click)="onSelect(edificio)">
+        <span class="id">
+          <a routerLink="/sensori">Dettagli edificio {{ edificio.id }}</a>
+        </span>
+      </button>
+      </td>
+      <td>{{ edificio.indirizzo }}</td>
+      <td>{{ edificio.dimensioni }}</td>
+      <td>{{ edificio.annoCostruzione }}</td>
     </tr>
   </tbody>
 </table>
+
+
