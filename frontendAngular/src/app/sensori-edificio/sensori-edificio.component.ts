@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { interfacciaEdificio } from '../interfaccia';
+import { interfacciaSensore } from '../interfaccia';
 
 @Component({
-  selector: 'app-sensori-edificio',
+  selector: 'sensori-edificio',
   templateUrl: './sensori-edificio.component.html',
   styleUrls: ['./sensori-edificio.component.css']
 })
 export class SensoriEdificioComponent {
+
+  sensori: interfacciaSensore[] = [];
+
 
 }

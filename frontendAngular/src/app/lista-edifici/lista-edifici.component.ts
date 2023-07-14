@@ -9,18 +9,15 @@ import { interfacciaEdificio } from '../interfaccia';
 })
 export class ListaEdificiComponent implements OnInit{
 
+  //array che raccoglie i dati degli edifici
   edifici: interfacciaEdificio[] = [];
-  edificioSelezionato?: interfacciaEdificio;
-
-  onSelect(edificio: interfacciaEdificio): void {
-    this.edificioSelezionato = edificio;
-  }
+  selectedEdificio?: interfacciaEdificio;
 
   //dependency injection per il service
   constructor (private EdificioService: EdificioService){
 
   }
-//roba per  il service
+// per  il service
   getEdifici(): void {
     this.EdificioService.getEdifici()
         .subscribe(edifici => this.edifici = edifici);
@@ -28,6 +25,10 @@ export class ListaEdificiComponent implements OnInit{
 
   ngOnInit(): void {
     this.getEdifici();
+  }
+
+  selectEdificio(edificio: interfacciaEdificio): void {
+    this.selectedEdificio = edificio;
   }
 
 }

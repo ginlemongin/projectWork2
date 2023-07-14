@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { interfacciaEdificio, interfacciaSensore } from './interfaccia';
-import { EDIFICI_MOCK, SENSORI_MOCK } from 'src/mock';
-import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { interfacciaEdificio } from './interfaccia';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
