@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { interfacciaEdificio } from './interfaccia';
+import { interfacciaEdificio} from './interfaccia';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -17,6 +17,12 @@ export class EdificioService {
   getEdifici(): Observable<interfacciaEdificio[]> {
     return this.http.get<interfacciaEdificio[]>(this.apiUrl)
 
+  }
+
+  //il service fa una call per ottenere i dati dei sensori e restituire un oggetto
+  getEdificio(id: number): Observable<interfacciaEdificio> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<interfacciaEdificio>(url);
   }
 
 }

@@ -1,5 +1,5 @@
 <h1>Sensore</h1>
-<table>
+<table *ngIf="edificio">
   <thead>
     <tr>
       <th>Tipo</th>
@@ -8,10 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    <tr *ngFor="let sensori of edificio.sensore">
+      <td>{{ sensori.tipo_di_sensore }}</td>
+      <td>{{ sensori.dati_di_consumo }}</td>
+      <td>{{ sensori.data_di_installazione }}</td>
   </tbody>
 </table>
+
+<!-- quanado itero un singolo edificio gli devo specificare che l'edificio esiste -->

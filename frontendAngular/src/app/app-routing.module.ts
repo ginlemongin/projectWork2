@@ -4,9 +4,9 @@ import { ListaEdificiComponent } from './lista-edifici/lista-edifici.component';
 import { SensoriEdificioComponent } from './sensori-edificio/sensori-edificio.component';
 
 const routes: Routes = [
+  { path: '', component: ListaEdificiComponent },
   { path: 'edifici', component: ListaEdificiComponent },
-  { path: 'sensori', component: SensoriEdificioComponent },
-  { path: '', redirectTo: '/edifici', pathMatch: 'full' },
+  { path: 'edificio/:id', component: SensoriEdificioComponent }
 ];
 
 @NgModule({

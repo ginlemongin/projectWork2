@@ -9,17 +9,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let edificio of edifici" (click)="selectEdificio(edificio)">
+    <tr *ngFor="let edificio of edifici">
       <td>
-      <button type="button">
+      <button type="button" (click)="goToDetail(edificio)">
         <span class="id">
-          <a routerLink="/sensori">Dettagli edificio {{ edificio.id }}</a>
+          <a [routerLink]="['/edificio', edificio.id]">Dettagli edificio {{ edificio.id }}</a>
         </span>
       </button>
       </td>
       <td>{{ edificio.indirizzo }}</td>
       <td>{{ edificio.dimensioni }}</td>
-      <td>{{ edificio.annoCostruzione}}</td>
+      <td>{{ edificio.anno_di_costruzione}}</td>
     </tr>
   </tbody>
 </table>

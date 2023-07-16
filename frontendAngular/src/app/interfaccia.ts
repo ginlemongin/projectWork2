@@ -1,13 +1,14 @@
 export interface interfacciaEdificio {
   id:number;
+  anno_di_costruzione: number;
   indirizzo: string;
   dimensioni: string;
-  annoCostruzione: number;
+  sensore:interfacciaSensore[];
 }
 
 export interface interfacciaSensore {
   id: number;
-  tipo: string;
-  datiConsumo: number[];
-  dataInstallazione: string;
+  tipo_di_sensore: string;
+  dati_di_consumo: number[];
+  data_di_installazione: string;
 }

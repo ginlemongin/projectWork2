@@ -19,7 +19,7 @@ use App\Http\Controllers\EdificioController;
 
 Route::post('/edificioNuovo', [EdificioController::class, 'create']);
 
-Route::get('/{id}/edificio', [EdificioController::class, 'read']);
+Route::get('edifici/{id}/', [EdificioController::class, 'read']);
 
 Route::get('/edifici', [EdificioController::class, 'readAll']);
 
